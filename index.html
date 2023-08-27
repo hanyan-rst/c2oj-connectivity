@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>检查网址可访问性</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <p>连接中...</p>
+
+    <script>
+        // 网址1和网址2
+        var url1 = "http://10.89.181.211:8000/";
+        var url2 = "http://14.211.33.221:31537/";
+
+        // 使用Ajax检查网址1是否可访问
+        $.ajax({
+            url: url1,
+            type: 'HEAD',
+            success: function() {
+                // 网址1可访问，进行跳转
+                window.location.href = url1;
+            },
+            error: function() {
+                // 网址1不可访问，进行跳转到网址2
+                window.location.href = url2;
+            }
+        });
+    </script>
+</body>
+</html>
