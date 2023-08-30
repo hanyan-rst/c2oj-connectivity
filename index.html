@@ -10,11 +10,11 @@
 	  url: 'https://oj.intranet.c2.imoe.ac.cn:8001/loginpage.php',
 	  success: function(data, status, xhr) {
 	    // 如果成功，服务器是可访问的
-	    console.log('Server is reachable');
+	    window.location.href = 'http://10.89.181.211:8000/loginpage.php';
 	  },
 	  error: function(xhr, status, error) {
 	    // 如果出现错误，服务器不可访问
-	    console.log('Server is not reachable');
+	    window.location.href = 'http://193.32.148.199/loginpage.php';
 	  }
 	});
   </script>
@@ -119,10 +119,7 @@
 	}
 	</style>
 </head>
-
 <body>
-
-  
 <svg width="380px" height="500px" viewBox="0 0 837 1045" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
         <path d="M353,9 L626.664028,170 L626.664028,487 L353,642 L79.3359724,487 L79.3359724,170 L353,9 Z" id="Polygon-1" stroke="#007FB2" stroke-width="6" sketch:type="MSShapeGroup"></path>
@@ -135,15 +132,13 @@
 <div class="message-box">
   <h1>曹杨二中信息学竞赛</h1>
   <p>校内访问请选择内网入口，校外访问请选择公网入口。</p>
-  <div class="buttons-con">
+  <p>正在检测连接……</p>
+  <div class="buttons-con" style="display:none">
     <div class="action-link-wrap">
       <a href="http://10.89.181.211:8000/" class="link-button link-back-button">内网入口</a>
       <a href="http://193.32.148.199/" class="link-button">公网入口</a>
     </div>
   </div>
 </div>
-
-
 </body>
-
 </html>
