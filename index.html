@@ -3,6 +3,15 @@
 
 <head>
   <meta charset="UTF-8">
+  <script>
+  	$.ajax({
+	    type: 'HEAD',
+	    url: 'http://10.89.181.211:8000',
+	    success: function(data, status, xhr) {
+	        console.log('OK');
+	    }
+	});
+  </script>
   <title>曹杨二中信息学竞赛</title>
 	  <style>
 	body {
