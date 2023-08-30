@@ -5,13 +5,17 @@
   <meta charset="UTF-8">
   <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.6.0/jquery.min.js"></script>
   <script>
-  	$.ajax({
-	    type: 'HEAD',
-	    url: 'https://10.89.181.211:9443/',
-	    success: function(data, status, xhr) {
-	        console.log('OK');
+  	fetch('https://10.89.181.211:9443/', {
+	  method: 'HEAD'
+	})
+	  .then(response => {
+	    if (response.status === 200) {
+	      console.log('OK');
 	    }
-	});
+	  })
+	  .catch(error => {
+	    console.error('Error:', error);
+	  });
   </script>
   <title>曹杨二中信息学竞赛</title>
 	  <style>
