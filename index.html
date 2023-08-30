@@ -8,6 +8,7 @@
   	$.ajax({
 	  type: 'HEAD',
 	  url: 'https://oj.intranet.c2.imoe.ac.cn:8001/loginpage.php',
+	  timeout: 500,
 	  success: function(data, status, xhr) {
 	    // 如果成功，服务器是可访问的
 	    window.location.href = 'http://10.89.181.211:8000/loginpage.php';
