@@ -3,6 +3,16 @@
 
 <head>
   <meta charset="UTF-8">
+  <script>
+  	const urls = [
+		'http://10.89.181.211:8000/favicon.ico'
+	];
+	urls.forEach( url => {
+		const img = new Image();
+		img.onload = () => console.log(`url: ${ url } OK`);
+		img.src = url ;
+	} );
+  </script>
   <title>曹杨二中信息学竞赛</title>
 	  <style>
 	body {
