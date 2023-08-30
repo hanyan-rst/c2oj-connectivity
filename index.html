@@ -5,17 +5,18 @@
   <meta charset="UTF-8">
   <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.6.0/jquery.min.js"></script>
   <script>
-  	fetch('https://10.89.181.211:9443/', {
-	  method: 'HEAD'
-	})
-	  .then(response => {
-	    if (response.status === 200) {
-	      console.log('OK');
-	    }
-	  })
-	  .catch(error => {
-	    console.error('Error:', error);
-	  });
+  	$.ajax({
+	  type: 'OPTIONS',
+	  url: 'https://10.89.181.211:9443/',
+	  success: function(data, status, xhr) {
+	    // 如果成功，服务器是可访问的
+	    console.log('Server is reachable');
+	  },
+	  error: function(xhr, status, error) {
+	    // 如果出现错误，服务器不可访问
+	    console.log('Server is not reachable');
+	  }
+	});
   </script>
   <title>曹杨二中信息学竞赛</title>
 	  <style>
