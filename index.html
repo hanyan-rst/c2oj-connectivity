@@ -9,14 +9,18 @@
   </script>
   <script>
   	$.ajax({
-	  type: 'HEAD',
-	  url: 'https://oj.intranet.c2.imoe.ac.cn:8001/loginpage.php',
-	  timeout: 1500,
+	  type: 'POST',
+	  url: 'https://app.pte.sh.cn/PTEMAN/SearchNode',
+	  timeout: 1000,
 	  success: function(data, status, xhr) {
-	    window.location.href = 'http://10.89.181.211:8000/loginpage.php';
+	  if (response === null) {
+		    window.location.href = 'https://oj.internet.c2.imoe.ac.cn/loginpage.php';
+		} else {
+		    window.location.href = 'http://10.89.68.40:8001/';
+		}
 	  },
 	  error: function(xhr, status, error) {
-	    window.location.href = 'http://193.32.148.199/loginpage.php';
+	    alert('无法判断');
 	  }
 	});
   </script>
@@ -137,8 +141,8 @@
   <p>校内访问请选择内网入口，校外访问请选择公网入口。</p>
   <div class="buttons-con">
     <div class="action-link-wrap">
-      <a href="http://10.89.181.211:8000/" class="link-button link-back-button">内网入口</a>
-      <a href="http://193.32.148.199/" class="link-button">公网入口</a>
+      <a href="http://10.89.68.40:8001/" class="link-button link-back-button">内网入口</a>
+      <a href="https://oj.internet.c2.imoe.ac.cn/loginpage.php" class="link-button">公网入口</a>
     </div>
   </div>
 </div>
