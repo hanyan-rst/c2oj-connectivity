@@ -7,13 +7,13 @@
   <script>
   	$.ajax({
 	  type: 'HEAD',
-	  url: 'https://check.cyez.cc:8160/loginpage.php',
+	  url: 'https://check.cyez.cc:8160/',
 	  timeout: 1000,
 	  success: function(data, status, xhr) {
-	    window.location.href = 'https://eduoj.cyez.cc:8160/loginpage.php';
+	    window.location.href = 'https://eduoj.cyez.cc:8160/';
 	  },
 	  error: function(xhr, status, error) {
-	    window.location.href = 'https://oj.cyez.cc:18160/loginpage.php';
+	    window.location.href = 'https://oj.cyez.cc:18160/';
 	  }
 	});
   </script>
@@ -134,8 +134,8 @@
   <p>校内访问请选择内网入口，校外访问请选择公网入口。</p>
   <div class="buttons-con">
     <div class="action-link-wrap">
-      <a href="https://eduoj.cyez.cc:8160/loginpage.php" class="link-button link-back-button">内网入口</a>
-      <a href="https://oj.cyez.cc:18160/loginpage.php" class="link-button">公网入口</a>
+      <a href="https://eduoj.cyez.cc:8160/" class="link-button link-back-button">内网入口</a>
+      <a href="https://oj.cyez.cc:18160/" class="link-button">公网入口</a>
     </div>
   </div>
 </div>
